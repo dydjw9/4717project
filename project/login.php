@@ -1,16 +1,23 @@
 <?php
-
+session_start();
 $pubemail=$_GET['username'];
 $pwd=$_GET['userpassword'];
+
 require_once('conn.php');
-mysql_select_db(f32ee);
+
 $cmd="SELECT * FROM TMem where PubEmail='$pubemail';";
 
-echo "</br>".$cmd;
+
 $sql=mysql_query($cmd,$link);
 $result=mysql_fetch_array($sql);
 if($result==false)
 	echo "failed";
-else echo $result[Pwd];
+else if($pwd==$result[Pwd])
+{
+	$_SESSION["pubemail"]=$pubemail;
+     $_SESSION["pwd"]=$pwd;
+	 echo "</br>login success";
+	 echo "</br>".$_SESSION["pwd"];
+}
 	mysql_close($link);
 ?>

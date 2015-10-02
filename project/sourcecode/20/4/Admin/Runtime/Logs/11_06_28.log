@@ -1,0 +1,2 @@
+[ 2011-06-28T09:28:09+08:00 ] SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.002429s ]
+[ 2011-06-28T09:28:09+08:00 ] SQL: SELECT * FROM `think_user` [ RunTime:0.000514s ]

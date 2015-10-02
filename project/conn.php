@@ -1,7 +1,9 @@
 <?php
-$link=mysql_connect("localhost","f32ee","f32ee") or die("error".mysql_error());
+$link=mysql_connect("localhost","root","4717project") or die("error".mysql_error());
 if($link){
-	echo"connection_success";
+
 	
 }
+mysql_select_db("4717test");
+
 ?>

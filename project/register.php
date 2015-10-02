@@ -8,10 +8,12 @@ $pwd=$_GET['userpassword'];
 $priemail=$_GET['address'];
 $b=str_ireplace("-","",$birthday);
 require_once('conn.php');
-mysql_select_db(f32ee);
-$cmd="INSERT INTO TMem(FirstName,LastName,NumID,PubEmail,PriEmail,Pwd,gender,birthdate) 
-VALUES ('$firstname','$lastname','$b','$pubemail','$priemail','$pwd','$gender','$b');";
-echo "</br>".$cmd;
+
+$numid=md5(uniqid().$pubemail); 
+echo "</br>id is ".$numid; 
+$cmd="INSERT INTO TMem(FirstName,LastName,NumID,PubEmail,PriEmail,Pwd,gender,birthday) 
+VALUES ('$firstname','$lastname','$numid','$pubemail','$priemail','$pwd','$gender','$b');";
+echo "</br>cmd is".$cmd;
 mysql_query($cmd,$link);
 	mysql_close($link);
 ?>

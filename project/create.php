@@ -3,7 +3,7 @@
 	require_once('conn.php');
 
 	echo $link."</br>";
-	mysql_select_db(f32ee);
+	
 	$sql="CREATE TABLE TMem
 	(
 	FirstName varchar(15),

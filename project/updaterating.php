@@ -36,8 +36,7 @@ if ($count==0){
 
 }
 else{
-	echo "you already rated for this item";
-
+	header("location: ../message.php?message=13");
 }
 
 ?>

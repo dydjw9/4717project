@@ -17,7 +17,7 @@ if(empty($_SESSION["loginstatus"]))
 $_SESSION["loginstatus"]=0;
 $_SESSION["userid"]=null;
 $_SESSION["firstname"]=null;
-$_SESSION["activate"]=null;
+$_SESSION["activate"]=1;
 $_SESSION["itemid"]=null;
 $_SESSION["address"]=null;
 $_SESSION["oderid"]=array();

@@ -20,5 +20,6 @@ $res2=$result->fetch(PDO::FETCH_ASSOC);
 echo $sql;
 $_SESSION["totalpayment"]=$res2[Total];
 echo $res2[Total];
+if($_SESSION["activate"]==1)
 header("location:../payment.php");
 ?>

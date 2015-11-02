@@ -346,10 +346,10 @@ function DeleteList(x,y){
 <form method="post" action="project/checkout.php">
 	
 <?php
-
-for($i=0;$i<count($res);$i++)
+$totalitem=count($res)-1;
+for($j=0;$j<count($res);$j++)
 {
-
+$i=$totalitem-$j;
 $aa=$res[$i][ItemID];
 $cmd="SELECT * FROM 4717item where ItemID='$aa';";
 $result2=$pdo->prepare($cmd);
@@ -360,7 +360,7 @@ echo '
 
   <table cellpadding="0" cellspacing="0" class="gwc_tb2" id="table'.$res[$i][ItemID].'">
     <tr>
-      <td class="tb2_td1"><input type="checkbox" class="checkBox" checked="true"  name="isselect['.$i.']" value="'.$res[$i][ItemID].'" id="checkbox'.$res[$i][ItemID].'" onClick="getTotal();"/></td>
+      <td class="tb2_td1"><input type="checkbox" class="checkBox" checked="true"  name="isselect['.$i.']" value="'.$res[$i][ItemID].'" id="checkbox'.$res[$i][ItemID].'" onClick="getTotal();"/><label style="font-size:0.3px;">'.date("Y-m-d",$res[$i][Date]).'</label></td>
       <td class="tb2_td2"><a href="item.php?itemid='.$res[$i][ItemID].'"><img src="'.$res2[Path].'big.jpg"/></td>
       <td class="tb2_td3"><a href="item.php?itemid='.$res[$i][ItemID].'">'.$res2[Name].'</a></td>
       <td class="tb2_td4"></td>

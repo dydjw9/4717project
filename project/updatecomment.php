@@ -12,21 +12,20 @@ $userid=$_SESSION["userid"];
 $itemid=$_SESSION['itemid'];
 $firstname=$_SESSION['firstname'];
 
-$db_check=new mysqli($host,$user,$pwd,$dbName);
-$cmd_check="SELECT * FROM 4717order where UserID='$userid' and ItemID='$itemid' and Status='1';";
-$result_check=$db_check->query($cmd_check);
-$check=$result_check->num_rows;
+$cmd="SELECT * FROM 4717order where UserID='$userid' and ItemID='$itemid' and Status='1';";
+
+$result=$pdo->prepare($cmd);
+$result->execute();
+$flag=$result->rowCount();
 
 
-
-if ($check==0){
+if ($flag!=0){
 	$date=date('d/M/Y');
     $sql="insert into 4717comment (ItemID,UserID,FirstName,Comment,Time) values('$itemid','$userid','$firstname','$comment','$date')";
     $result=$pdo->prepare($sql);
     $result->execute();
-    //echo $date;
-    //echo $comment;
-   header("location: ../message.php?message=");
+   
+   header("location: ../item.php?itemid=$itemid");
     }
 else{
     	header("location: ../message.php?message=9");

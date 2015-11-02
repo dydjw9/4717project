@@ -47,7 +47,8 @@ else
 	if($result[Activate]==0)
 		{
 			echo "you need activate";
-	$_SESSION["loginstatus"]=3;
+	$_SESSION["loginstatus"]=1;
+	$_SESSION["activate"]=0;
 	header("location: ../message.php?message=1");
 	}
 	else 

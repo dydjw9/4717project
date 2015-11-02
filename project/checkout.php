@@ -9,20 +9,20 @@ require_once('session.php');
 require_once('conn.php');
 require_once('checklogin.php');
 
-if($_SESSION["loginstatus"]==3)
+if($_SESSION["activate"]==0)
 {
 	echo "idiot";
 	header("location: ../message.php?message=1");
 
 }
 
-
+else{
 
 if( count($_POST['isselect'])==0)
 {
 	header("location:../message.php?message=5");
 }
-
+else {
 $isselect=$_POST['isselect'];
 $quantity=$_POST['price'];
 $count=count($quantity);
@@ -75,10 +75,10 @@ $flag=$result->rowCount();
 $_SESSION["oderid"]=$orderarray;
 $_SESSION["totalpayment"]=$total;
 
-if( count($_POST['isselect'])!=0 && $_SESSION["loginstatus"]!=3)
+if( count($_POST['isselect'])!=0 && $_SESSION["activate"]==1)
 header("location:../payment.php");
-
-
+}
+}
 
 
 

@@ -1,6 +1,11 @@
 <?php
 require_once("project/session.php");
 
+//<img src="images/dota2.png" alt="Chania" width="460" height="260">
+
+
+
+
 ?>
 
 
@@ -155,19 +160,20 @@ function blur(x){
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="images/dota2.png" alt="Chania" width="460" height="260">
+       <a href="item.php?itemid=1031"> <img src="games/slider/dota2.jpg" alt="Chania" width="460" height="260"></a>
       </div>
 
       <div class="item">
-        <img src="images/LOL.png" alt="Chania" width="460" height="260">
+       <a href="item.php?itemid=2035"> <img src="games/slider/witch3.jpg" alt="Chania" width="460" height="260"></a>
       </div>
     
       <div class="item">
-        <img src="images/skyrim.png" alt="Flower" width="460" height="260">
+       <a href="item.php?itemid=3033"> <img src="games/slider/europa4.jpg" alt="Chania" width="460" height="260"></a>
       </div>
 
+   
       <div class="item">
-        <img src="images/gta.png" alt="Flower" width="460" height="260">
+       <a href="item.php?itemid=1032"> <img src="games/slider/lol.jpg" alt="Chania" width="460" height="260"></a>
       </div>
     </div>
 

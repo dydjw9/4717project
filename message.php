@@ -31,6 +31,8 @@ $message=array(0=>"Thanks for joining us, please check the email we sent to
    11=>"Sorry, no such account. You will be redirect to previous page
    in <label id='secondclock' style='color:red;'>3</label> seconds ",
    12=>"An email to change your password has been sent to your email. <br>You will be redirect to home page
+   in <label id='secondclock' style='color:red;'>3</label> seconds ",
+   13=>"you have already rated this item.<br>You will be redirect to previous page
    in <label id='secondclock' style='color:red;'>3</label> seconds "
    );
 $redirect=array(
@@ -46,7 +48,8 @@ $redirect=array(
 9=>"item.php?itemid=$itemid",
 10=>"login.php",
 11=>"forgotpassword.php",
-12=>"index.php"
+12=>"index.php",
+13=>"item.php?itemid=$itemid"
   );
 ?>
 

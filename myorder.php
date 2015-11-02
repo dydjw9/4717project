@@ -352,10 +352,10 @@ function pay(x,y){
 
 	
 <?php
-
-for($i=0;$i<count($res);$i++)
+$totalitem=count($res)-1;
+for($j=0;$j<count($res);$j++)
 {
-
+$i=$totalitem-$j;
 $aa=$res[$i][ItemID];
 $cmd="SELECT * FROM 4717item where ItemID='$aa';";
 $result2=$pdo->prepare($cmd);

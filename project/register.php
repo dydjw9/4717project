@@ -26,7 +26,7 @@ $numid=md5(uniqid().$pubemail);
 $password=md5($password);
 
 $cmd="INSERT INTO 4717member(FirstName,LastName,NumID,PubEmail,Address,Password,Gender,Birthday,Activate,phone) 
-VALUES ('$firstname','$lastname','$numid','$pubemail','$address','$password','$gender','$b','false','$phone');";
+VALUES ('$firstname','$lastname','$numid','$pubemail','$address','$password','$gender','$b','0','$phone');";
 $result=$pdo->prepare($cmd);
 $result->execute();
 

@@ -23,8 +23,12 @@ des:this php is to connect to database. Class debug is also in here
 	$host='ap-cdbr-azure-southeast-a.cloudapp.net';
 
 
-	
 	$dsn="$dbms:host=$host;dbname=$dbName";
+
+
+
+
+
 	try{
 		$pdo=new PDO($dsn,$user,$pwd);
 	

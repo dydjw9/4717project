@@ -36,6 +36,7 @@ $_SESSION["pubemail"]=$pubemail;
 	$_SESSION["firstname"]=$firstname;
 	$_SESSION["activate"]=0;
 	 $_SESSION["loginstatus"]=1;
+	  $_SESSION["userid"]=$numid;
 header("location:../message.php?message=0");
-
+	 
 ?>

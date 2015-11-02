@@ -1,5 +1,0 @@
-PHP
-
-PHPer
-
-I like PHP.

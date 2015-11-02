@@ -1,1 +1,0 @@
-<img src="images/jollification.jpg" width="565" height="364" />

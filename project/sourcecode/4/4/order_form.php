@@ -1,1 +1,0 @@
-<img src="images/bg_06.jpg" width="565" height="364" />

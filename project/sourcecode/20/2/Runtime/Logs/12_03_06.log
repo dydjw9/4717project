@@ -1,8 +1,0 @@
-[ 2012-03-06T13:53:40+08:00 ] SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.109651s ]
-[ 2012-03-06T13:53:40+08:00 ] SQL: SELECT * FROM `think_user` [ RunTime:0.000562s ]
-[ 2012-03-06T13:57:03+08:00 ] SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.067687s ]
-[ 2012-03-06T13:57:03+08:00 ] SQL: SELECT * FROM `think_user` [ RunTime:0.011001s ]
-[ 2012-03-06T14:01:06+08:00 ] SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.003180s ]
-[ 2012-03-06T14:01:07+08:00 ] SQL: SELECT * FROM `think_user` [ RunTime:0.001630s ]
-[ 2012-03-06T14:01:07+08:00 ] SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.002867s ]
-[ 2012-03-06T14:01:07+08:00 ] SQL: SELECT * FROM `think_user` [ RunTime:0.001053s ]

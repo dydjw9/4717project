@@ -1,23 +1,72 @@
 <?php
-session_start();
-$pubemail=$_GET['username'];
-$pwd=$_GET['userpassword'];
-
-require_once('conn.php');
-
-$cmd="SELECT * FROM TMem where PubEmail='$pubemail';";
+/*
+author: Du Jiawei , Yangweitao
+project: 4717webdesign
+des:this php is to proceed the request of login
+*/
 
 
-$sql=mysql_query($cmd,$link);
-$result=mysql_fetch_array($sql);
-if($result==false)
-	echo "failed";
-else if($pwd==$result[Pwd])
+
+require_once('conn.php');  //connect to db
+require_once('session.php');
+     //start session
+
+$pubemail=$_POST['username'];   
+$password=$_POST['userpassword'];         //get user & pwd
+
+$password=md5($password);
+
+$cmd="SELECT * FROM 4717member where PubEmail='$pubemail';";    //sql commend
+
+$result=$pdo->prepare($cmd);
+$result->execute();
+$flag=$result->rowCount();
+//if($result==false)
+if($flag==0)
+	{echo "failed";
+$_SESSION["loginstatus"]=2;
+header("location:../login.php");
+
+//$debug->debugprint('sql comment',$cmd);
+
+}
+
+else 
+	{ $result=$result->fetch(PDO::FETCH_ASSOC);
+		if($password==$result[Password])
 {
 	$_SESSION["pubemail"]=$pubemail;
-     $_SESSION["pwd"]=$pwd;
+     $_SESSION["password"]=$password;
+	$_SESSION["firstname"]=$result[FirstName];
+	$_SESSION["activate"]=$result[Activate];
+	$_SESSION["userid"]=$result[NumID];
+	$_SESSION["address"]=$result[Address];
 	 echo "</br>login success";
-	 echo "</br>".$_SESSION["pwd"];
+	 $_SESSION["loginstatus"]=1;
+//header("location:../index.php");
+	if($result[Activate]==0)
+		{
+			echo "you need activate";
+	$_SESSION["loginstatus"]=3;
+	header("location: ../message.php?message=1");
+	}
+	else 
+	{
+		header("location:../index.php");
+	}
 }
-	mysql_close($link);
+ else {echo "password error";
+$debug->debugprint("true password ",$result[Password]);
+$debug->debugprint("input password ",$password);
+
+	
+$_SESSION["loginstatus"]=2;
+	header("location:../login.php");     //0, no attempt to login
+												//1,login success
+												// 2, account or pwd error 3, not activate
+
+}
+	
+	
+	}
 ?>

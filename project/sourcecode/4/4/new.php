@@ -1,1 +1,0 @@
-<img src="images/new.jpg" width="565" height="364" />

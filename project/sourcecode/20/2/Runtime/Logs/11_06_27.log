@@ -1,4 +1,0 @@
-[ 2011-06-27T09:39:59+08:00 ] SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.003008s ]
-[ 2011-06-27T09:39:59+08:00 ] SQL: SELECT * FROM `think_user` [ RunTime:0.000542s ]
-[ 2011-06-27T09:50:06+08:00 ] SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.002713s ]
-[ 2011-06-27T09:50:06+08:00 ] SQL: SELECT * FROM `think_user` [ RunTime:0.000587s ]

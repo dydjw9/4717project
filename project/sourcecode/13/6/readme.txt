@@ -1,1 +1,0 @@
-测试本程序，需要修改index.php文件中的路径或者在D盘创建该目录“d:\\appserv\www\tm\sl\13”

@@ -1,4 +1,9 @@
 <?php
+/*
+author: Du Jiawei , Yangweitao
+project: 4717webdesign
+des:this php is the code to create database
+*/
 	//header("Content-Type:text/html;charset=utf-8");
 	require_once('conn.php');
 

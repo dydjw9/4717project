@@ -59,8 +59,8 @@ $redirect=array(
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>GameStar</title>
 <link rel="icon" href="../images/title.ico" type="image/x-icon">
-<link rel="newer stylesheet" href="../css/style.css" type="text/css" media="all" />
-<link href="../css/nav.css" rel="stylesheet" type="text/css" />
+<link rel="newer stylesheet" href="css/style.css" type="text/css" media="all" />
+<link href="css/nav.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="newer stylesheet" href="css/bootstrap.css" type="text/css" media="all" />
 <style>
@@ -76,17 +76,18 @@ if(seconds==0)
 {
   window.location.href=<?php echo '"'.$redirect[$index].'"';?>;
 }
+else{
 document.getElementById("secondclock").innerHTML=seconds;
 i=seconds-1;
    das=setTimeout("startclock("+i+")",1000);
-
+}
 
 }
 
 
 </script>
 </head>
-<body <? echo 'onload="startclock(3)"'; ?>>
+<body <?php echo 'onload="startclock(3)"'; ?>>
 <div class="wrapper">
   <header class="header" id="nav_main">
       

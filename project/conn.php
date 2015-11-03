@@ -16,8 +16,8 @@ des:this php is to connect to database. Class debug is also in here
 	$user='f32ee';
 	$pwd='f32ee';
 	$host='localhost';
-
 */
+
 	$user='b39729e4805366';
 	$pwd='f49ac655';
 	$host='ap-cdbr-azure-southeast-a.cloudapp.net';

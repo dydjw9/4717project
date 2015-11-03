@@ -8,8 +8,14 @@ des:this php is to add item to cart
 require_once('session.php');
 require_once('conn.php');
 require_once('checklogin.php');
+
 $itemid=$_GET['itemid'];
 $_SESSION["itemid"]=$itemid;
+if($Sloginstatus==0)
+{
+	header("location:../login.php");
+}
+else {
 
 $sql="select * from 4717cart where ItemID='".$itemid."' AND UserID='".$_SESSION["userid"]."' And Status='0'";
 
@@ -49,6 +55,6 @@ header("location:../message.php?message=4");
 
 
 
-
+}
 
 ?>

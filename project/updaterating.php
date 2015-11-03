@@ -10,7 +10,11 @@ require_once("session.php");
 $rate=$_GET[rate];
 $userid=$_SESSION["userid"];
 $itemid=$_SESSION['itemid'];
-
+if($Sloginstatus==0)
+{
+	header("location:../login.php");
+}
+else {
 
 $cmd="SELECT * FROM 4717rating where UserID='$userid' and ItemID='$itemid';";
 $db=new mysqli($host,$user,$pwd,$dbName);
@@ -38,5 +42,5 @@ if ($count==0){
 else{
 	header("location: ../message.php?message=13");
 }
-
+}
 ?>

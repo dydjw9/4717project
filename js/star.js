@@ -2,7 +2,7 @@
 $(document).ready(function(){
     var stepW = 24;
 
-    var description = new Array("strongly not recommended","recommended","neutral","recommended","strongly recommended");
+    var description = new Array("strongly not recommended","not recommended","neutral","recommended","strongly recommended");
     var stars = $("#star > li");
     var descriptionTemp;
     $("#showb").css("width",0);

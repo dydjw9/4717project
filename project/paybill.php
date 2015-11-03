@@ -20,7 +20,8 @@ foreach ($_SESSION["oderid"] as $key => $value) {
   //$cmd="SELECT FROM 4717order SET Status='1' where  OrderID='".$value."';";
   $emailall.='<br>'.$value;
 }
-
+$result=$pdo->prepare($sqlall);
+$result->execute();
 ordermail($_SESSION["pubemail"], $emailall);
 echo "dsada";
 header("location:../message.php?message=7");

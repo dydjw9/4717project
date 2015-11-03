@@ -142,12 +142,14 @@ a.more:hover { text-decoration: none;  }
 #footer .shell { background: url(../images/footer.png) repeat 0 0; padding-left:10%;width:80%;display:block; text-align: center; }
 #footer .footer-cols { padding: 0 0; text-align: center; width:100%; display:table;min-width:1200px;}
 .footer-cols:after { content:' '; display:inline-block; width: 100%; height: 0;margin-bottom: 60px; }
+.footer-cols:nth-child(1) ul{padding-left:60px;}
 #footer .col { width: 260px; float: left;}
 #footer .col + .col { padding-left: 22px; }
 #footer h2 { font-size: 20px; margin-bottom:  10px; color: #fff; background: url(../images/footer.png) repeat 0 0; padding-bottom: 10px; text-shadow: rgba(0,0,0,0.9) 1px 1px 1px; font-family: 'Jura', sans-serif; font-weight: 700; text-transform: uppercase;  }
 
 
 #footer .col ul { list-style: none; list-style-position: outside; text-align: left;padding-left: 80px;}
+
 #footer .col ul li { padding-left: 11px; background: url(../images/green-arr.png) no-repeat 0 8px; padding-bottom: 7px; font-size: 11px; }
 #footer .col p { font-size: 11px; color: #bebebe; } 
 
@@ -165,6 +167,7 @@ a.more:hover { text-decoration: none;  }
 .login h2{font-size:20px;color:#F0FFFF;margin:0px 0px 1px 0px;font-family:'Roboto',sans-serif;}
 .forget {margin-right:20px;float:right;height:20px;margin-top:12px;}
 .forget a{font-size:12px;color:#CE7272;}
+.forget a:hover{color:white;}
 .login label{color:#F0FFFF;}
 .login input[type="text"] {
   font-size: 20px;
@@ -242,6 +245,7 @@ a.more:hover { text-decoration: none;  }
 }
 .registerrib{background: url(../images/clr-bar.png) no-repeat;background-size:cover;width:500px;height:5px;display:block;margin:0 auto;position:absolute;top:-1%;left:0%;}
 .register form{padding-left:10px;padding-right:10px;float:left;}
+#phoneerror{color:#D04973;font-size:10px;width:200px;background-color:rgba(30,46,64,1);padding-left:3px;border:blue;height:30px;display:none;position:absolute;top:395px;}
 #usernameerror{color:#D04973;font-size:10px;width:200px;border:blue;height:30px;margin-top:345px;}
 #passworderror{color:#D04973;font-size:10px;width:200px;background-color:rgba(30,46,64,1);padding-left:3px;border:blue;height:30px;display:none;position:absolute;top:475px;}
 #confirmpassworderror{color:#D04973;font-size:10px;width:200px;background-color:rgba(30,46,64,1);padding-left:3px;border:blue;height:30px;display:none;position:absolute;top:525px;}

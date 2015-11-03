@@ -7,6 +7,12 @@ des:this php is to delete items from shopping cart
 header('Content-type: text/html;charset=utf-8');		
 require_once('conn.php');
 require_once("session.php");
+if($Sloginstatus==0)
+{
+	header("location:../login.php");
+}
+else {
+
 $comment=$_POST[comment];
 $userid=$_SESSION["userid"];
 $itemid=$_SESSION['itemid'];
@@ -30,4 +36,5 @@ if ($flag!=0){
 else{
     	header("location: ../message.php?message=9");
     }
-    
+}
+?>

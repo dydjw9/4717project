@@ -30,7 +30,7 @@ echo $result[PubEmail];
 	$_SESSION["pubemail"]=$result[PubEmail];
      $_SESSION["password"]=$result[Password];
 	$_SESSION["firstname"]=$result[FirstName];
-	$_SESSION["activate"]=$result[Activate];
+	$_SESSION["activate"]='1';
 	$_SESSION["loginstatus"]=1;
 	header("location:../message.php?message=2");
 }

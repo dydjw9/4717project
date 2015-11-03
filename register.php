@@ -76,6 +76,20 @@ if($response=="ok")
 	     	else {error.innerHTML='';error.style.display="none";
         document.getElementById("submitbutton").disabled=false;}
 	     }
+		 function chkPhone (event){
+		
+	     	var myPhone=event.currentTarget;
+	     	var pos=myPhone.value.search(/^[\d]+$/);
+	     	var error=document.getElementById("phoneerror");
+	     	if (pos !=0) {
+			    error.style.display="block";
+			    error.innerHTML="phone number can only be digits";
+	     		document.getElementById("submitbutton").disabled=true;
+                myPhone.focus();
+	     	    myPhone.select();}
+	     	else {error.innerHTML='';error.style.display="none";
+        document.getElementById("submitbutton").disabled=false;}
+	     }
         function confirmPassword(event){
         	var PassWord=document.getElementById("password").value;
         	var confirmPassword=event.currentTarget;
@@ -87,7 +101,8 @@ if($response=="ok")
         	     confirmPassword.focus();
         	     confirmPassword.select();
         	}
-        	else {error.innerHTML='';error.style.display="none";
+        	else {error.innerHTML='';
+			error.style.display="none";
           document.getElementById("submitbutton").disabled=false;}
         }
 
@@ -102,7 +117,7 @@ if($response=="ok")
 	     	if (pos !=0) {
 			    error.style.display="block";
 			    error.innerHTML="Please enter a valid email address";
-            document.getElementById("submitbutton").disabled=true;
+                document.getElementById("submitbutton").disabled=true;
 	     		myPassword.focus();
 	     	    myPassword.select();}
 	        else {document.getElementById("submitbutton").disabled=false;
@@ -229,7 +244,7 @@ if($response=="ok")
     		       <label for="gender">Gender:</label><input type="radio" value="male" name="gender"/><span class="genderfont">Male&nbsp;&nbsp;&nbsp;</span>
     		                                          <input type="radio" value="female" name="gender"/><span class="genderfont">Female<span><br>
                    <label for="birthday" >Birthday:</label><input type="date" name="birthday" required>
-				   <label for="handphone">Phone: </label><input type="text" name="handphone" required>
+				   <label for="handphone">Phone: </label><input type="text" name="handphone" id="phone" required>
     		       <label for="username">UserEmail:</label><input type="email" value="some@where.com"  id="username" name="username" onfocus="this.value='';" onblur="if(this.value==''){this.value='some@where.com';}" required/>     
 	
     		       			   			   
@@ -240,9 +255,11 @@ if($response=="ok")
     	           <script type="text/javascript">
     	              var PassWord=document.getElementById("password");
     	              var ConfirmPassword=document.getElementById("confirmpassword");
+					  var username=document.getElementById("username");
+					  var phone=document.getElementById("phone");
     	              PassWord.addEventListener("change", chkPassword,false);
     	              ConfirmPassword.addEventListener("change",confirmPassword,false);
-						var username=document.getElementById("username");
+						phone.addEventListener("change", chkPhone,false);
 					 username.addEventListener("change", chkUserName,false);
     	            </script>
 
@@ -251,7 +268,9 @@ if($response=="ok")
 					
     	        </form><!--end of form-->
             </div><!--end of register-->
-			<div class="showpanel"><div id="usernameerror" class="rounded"></div>
+			<div class="showpanel">
+			                       <div id="phoneerror" class="rounded"></div>
+                                   <div id="usernameerror" class="rounded"></div>
 			                       <div id="passworderror" class="rounded"></div>
 								   <div id="confirmpassworderror" class="rounded"></div>    
 			</div>
